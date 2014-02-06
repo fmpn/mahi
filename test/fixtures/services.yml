@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  periodicity: MyString
+  description: MyText
+
+two:
+  type: 
+  periodicity: MyString
+  description: MyText
