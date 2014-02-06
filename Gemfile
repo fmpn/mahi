@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+#
+
+#gem Devise para autenticação de usuário
+gem 'devise', '~> 3.0.0.rc'
