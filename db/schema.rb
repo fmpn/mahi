@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206014057) do
+ActiveRecord::Schema.define(version: 20140212135448) do
+
+  create_table "providers", force: true do |t|
+    t.string   "name"
+    t.string   "cpf"
+    t.text     "bio"
+    t.string   "gender"
+    t.string   "city"
+    t.string   "state"
+    t.string   "cep"
+    t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "services", force: true do |t|
     t.string   "type"

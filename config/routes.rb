@@ -1,4 +1,6 @@
 Mahi::Application.routes.draw do
+  resources :providers
+
   devise_for :users
   resources :services
 

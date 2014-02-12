@@ -6,8 +6,8 @@ class ServicesController < ApplicationController
 
   # comentado por enquanto before_filter :authenticate_user!
   def index
-    @user = User.find(params[:user_id])
-    @services = @user.services
+    @provider = Provider.find(params[:provider_id])
+    @services = @provider.services
     authorize! :manage, @services
   end
 
@@ -15,14 +15,14 @@ class ServicesController < ApplicationController
   # GET /services/1.json
   def show
     @service = Service.find(params[:id])
-    @user = User.find(@service.user_id)
+    @provider = Provider.find(@service.provider_id)
     authorize! :manage, @service
   end
 
   # GET /services/new
   def new
-    @user = User.find(params[:user_id])
-    @service = @user.services.buid
+    @provider = Provider.find(params[:provider_id])
+    @service = @provider.services.buid
     authorize! :manage, @service
   end
 
@@ -34,8 +34,8 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
-    @user = User.find(params[:user_id])
-      @service = @user.services.create(serv_params)
+    @provider = Provider.find(params[:provider_id])
+      @service = @provider.services.create(serv_params)
       @service.user_id = current_user.id
       authorize! :manage, @service
 

@@ -53,6 +53,7 @@
               <li><%= link_to "Solicite um serviço", "/path2"  %></li>
               <li><%= link_to "Preste um serviço", "/path3"  %></li>
             </ul>
+
             <p class="navbar-text pull-right">
               <% if user_signed_in? %>
                 Logged in as <strong><%= current_user.email %></strong>.
@@ -66,7 +67,16 @@
         </div>
       </div>
     </div>
-    
+
+    <div class="jumbotron">
+      <div class="container">
+      <h1>Olá, seja bem-vindo ao Mahi!</h1>
+        <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, libero vel semper feugiat, dui erat ullamcorper turpis, sed accumsan quam sapien ac ipsum. Morbi eros ante, consectetur congue lorem ac, aliquam sodales odio. Pellentesque sollicitudin mollis lectus, non sagittis odio cursus id. Morbi eget viverra felis. Quisque suscipit sodales scelerisque. Etiam semper dictum enim, et pulvinar justo sodales id. Nunc vitae tempor leo, in pharetra nibh.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Saiba mais</a></p>
+      
+      </div>
+    </div>
+
 
     <div class="container">
         <div class="row">
